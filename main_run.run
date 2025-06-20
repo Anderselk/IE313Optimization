@@ -1,0 +1,21 @@
+model q1.mod;
+data data_q1.dat;
+option solver gurobi;
+solve;
+
+display Total_Weighted_Completion_Time;
+
+display start_time,comp_time,processing_time;
+
+display {j in JOBS, t in TIME: if_start[j, t] > 0} if_start[j, t];
+reset;
+
+include 'q2.mod';
+data;
+include 'data_q2.dat';
+option solver gurobi;
+option gurobi_options 'mipgap=0.01 outlev=1';
+solve;
+display Weighted_Sum;
+display x_anchor, y_anchor, start_time;
+
