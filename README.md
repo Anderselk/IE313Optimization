@@ -22,5 +22,5 @@ An advanced model that schedules jobs within a **2D spatial grid over time**, ac
 - `README.md`: Project overview and instructions
 
 ### Authors
-Anders Elk, Humza Khan, Addison Simon, Hadrian Sobota  
+Anders Elk Et al.
 Northwestern University – IEMS 313
